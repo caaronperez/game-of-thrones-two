@@ -18,6 +18,7 @@
 		BB9CFAEB22CFB543004EE419 /* NetworkManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAEA22CFB543004EE419 /* NetworkManagerDelegate.swift */; };
 		BB9CFAEE22CFB7B5004EE419 /* EpisodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAEC22CFB7B5004EE419 /* EpisodeViewCell.swift */; };
 		BB9CFAEF22CFB7B5004EE419 /* EpisodeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB9CFAED22CFB7B5004EE419 /* EpisodeViewCell.xib */; };
+		BB9CFAF122CFC57C004EE419 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAF022CFC57C004EE419 /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BB9CFAEA22CFB543004EE419 /* NetworkManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerDelegate.swift; sourceTree = "<group>"; };
 		BB9CFAEC22CFB7B5004EE419 /* EpisodeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewCell.swift; sourceTree = "<group>"; };
 		BB9CFAED22CFB7B5004EE419 /* EpisodeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewCell.xib; sourceTree = "<group>"; };
+		BB9CFAF022CFC57C004EE419 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		F9E95BB33D606DE11F93566C /* Pods-game-of-thrones-two.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game-of-thrones-two.debug.xcconfig"; path = "Pods/Target Support Files/Pods-game-of-thrones-two/Pods-game-of-thrones-two.debug.xcconfig"; sourceTree = "<group>"; };
 		F9FDEDCF8C8E8433F9989921 /* Pods-game-of-thrones-two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game-of-thrones-two.release.xcconfig"; path = "Pods/Target Support Files/Pods-game-of-thrones-two/Pods-game-of-thrones-two.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 				BB9CFAEA22CFB543004EE419 /* NetworkManagerDelegate.swift */,
 				BB2FCC9E22CFAD5B00C5F59E /* ViewController.swift */,
 				BB9CFAE622CFB1EB004EE419 /* NetworkManager.swift */,
+				BB9CFAF022CFC57C004EE419 /* DetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9CFAE922CFB313004EE419 /* APIConstants.swift in Sources */,
+				BB9CFAF122CFC57C004EE419 /* DetailController.swift in Sources */,
 				BB9CFAE722CFB1EB004EE419 /* NetworkManager.swift in Sources */,
 				BB9CFAEE22CFB7B5004EE419 /* EpisodeViewCell.swift in Sources */,
 				BB2FCC9F22CFAD5B00C5F59E /* ViewController.swift in Sources */,

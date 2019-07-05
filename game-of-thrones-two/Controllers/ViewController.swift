@@ -13,10 +13,13 @@ class ViewController: UIViewController {
   var episodes: [Episode] = []
   var networkRequests: [Any?] = []
   var delegate:NetworkManagerDelegateSerie?
+  @IBOutlet weak var tableView: UITableView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    getData {
+      tableView.reloadData()
+    }
   }
   
   func getData(closure: ()-> Void){
@@ -24,7 +27,6 @@ class ViewController: UIViewController {
       networkRequests.append(myNetworkManager)
       myNetworkManager.delegate = self
       myNetworkManager.downloadAPIPost()
-    }
   }
 
   override func didReceiveMemoryWarning() {
@@ -69,10 +71,18 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: NetworkManagerDelegate {
   func didDownloadPost(postArray: [String : Any]) {
-    if let n = postArray{
-      for i in 1...n{
-        let season = Season(imdbID: self.imdbID, season: "\(i)")
-        season.delegate = self
+    if let show = postArray["_embedded"] as? [String : Any] {
+      if let showEpisodes = show["episodes"] as? [[String: Any]] {
+        for i in 1...showEpisodes.count {
+          var episode = Episode()
+          episode.name = showEpisodes[i][EpisodeKeys.name] as? String
+          episode.airdate = showEpisodes[i][EpisodeKeys.airdate] as? String
+          episode.airtime = showEpisodes[i][EpisodeKeys.airtime] as? String
+          episode.id = showEpisodes[i][EpisodeKeys.id] as? Int
+          episode.number = showEpisodes[i][EpisodeKeys.number] as? String
+          episode.summary = showEpisodes[i][EpisodeKeys.summary] as? String
+          episodes.append(episode)
+        }
       }
     }
   }

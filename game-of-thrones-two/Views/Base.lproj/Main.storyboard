@@ -37,6 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Qcw-GE-rWg" id="yJm-Ll-KGc"/>
                         <segue destination="CZ0-lX-OWr" kind="showDetail" id="8Vu-Px-iVu"/>
                     </connections>
                 </viewController>

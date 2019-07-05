@@ -15,13 +15,13 @@ struct Show {
 }
 
 struct Episode {
-  let id: Int
-  let name: String
-  let season: String
-  let number: String
-  let summary: String
-  let airdate: String
-  let airtime: String
+  var id: Int?
+  var name: String?
+  var season: String?
+  var number: String?
+  var summary: String?
+  var airdate: String?
+  var airtime: String?
 }
 
 struct EpisodeKeys {
