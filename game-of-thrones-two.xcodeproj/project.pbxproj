@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CBD5BC7936392C46B5AFE4D /* Pods_game_of_thrones_two.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712F76453C3A53DA61881E9 /* Pods_game_of_thrones_two.framework */; };
 		BB2FCC9D22CFAD5B00C5F59E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2FCC9C22CFAD5B00C5F59E /* AppDelegate.swift */; };
 		BB2FCC9F22CFAD5B00C5F59E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2FCC9E22CFAD5B00C5F59E /* ViewController.swift */; };
 		BB2FCCA222CFAD5B00C5F59E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2FCCA022CFAD5B00C5F59E /* Main.storyboard */; };
 		BB2FCCA422CFAD5B00C5F59E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2FCCA322CFAD5B00C5F59E /* Assets.xcassets */; };
 		BB2FCCA722CFAD5B00C5F59E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2FCCA522CFAD5B00C5F59E /* LaunchScreen.storyboard */; };
+		BB9CFAE722CFB1EB004EE419 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAE622CFB1EB004EE419 /* NetworkManager.swift */; };
+		BB9CFAE922CFB313004EE419 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAE822CFB313004EE419 /* APIConstants.swift */; };
+		BB9CFAEB22CFB543004EE419 /* NetworkManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAEA22CFB543004EE419 /* NetworkManagerDelegate.swift */; };
+		BB9CFAEE22CFB7B5004EE419 /* EpisodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CFAEC22CFB7B5004EE419 /* EpisodeViewCell.swift */; };
+		BB9CFAEF22CFB7B5004EE419 /* EpisodeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB9CFAED22CFB7B5004EE419 /* EpisodeViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B712F76453C3A53DA61881E9 /* Pods_game_of_thrones_two.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_game_of_thrones_two.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2FCC9922CFAD5B00C5F59E /* game-of-thrones-two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-of-thrones-two.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2FCC9C22CFAD5B00C5F59E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB2FCC9E22CFAD5B00C5F59E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,13 @@
 		BB2FCCA322CFAD5B00C5F59E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB2FCCA622CFAD5B00C5F59E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB2FCCA822CFAD5B00C5F59E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB9CFAE622CFB1EB004EE419 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BB9CFAE822CFB313004EE419 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		BB9CFAEA22CFB543004EE419 /* NetworkManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerDelegate.swift; sourceTree = "<group>"; };
+		BB9CFAEC22CFB7B5004EE419 /* EpisodeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewCell.swift; sourceTree = "<group>"; };
+		BB9CFAED22CFB7B5004EE419 /* EpisodeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewCell.xib; sourceTree = "<group>"; };
+		F9E95BB33D606DE11F93566C /* Pods-game-of-thrones-two.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game-of-thrones-two.debug.xcconfig"; path = "Pods/Target Support Files/Pods-game-of-thrones-two/Pods-game-of-thrones-two.debug.xcconfig"; sourceTree = "<group>"; };
+		F9FDEDCF8C8E8433F9989921 /* Pods-game-of-thrones-two.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game-of-thrones-two.release.xcconfig"; path = "Pods/Target Support Files/Pods-game-of-thrones-two/Pods-game-of-thrones-two.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBD5BC7936392C46B5AFE4D /* Pods_game_of_thrones_two.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				BB2FCC9B22CFAD5B00C5F59E /* game-of-thrones-two */,
 				BB2FCC9A22CFAD5B00C5F59E /* Products */,
+				F0C4F2F79FF4E61C890CC14F /* Pods */,
+				D0EE11DBA2EAA4F2F7CB9D1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,60 @@
 		BB2FCC9B22CFAD5B00C5F59E /* game-of-thrones-two */ = {
 			isa = PBXGroup;
 			children = (
-				BB2FCC9C22CFAD5B00C5F59E /* AppDelegate.swift */,
-				BB2FCC9E22CFAD5B00C5F59E /* ViewController.swift */,
-				BB2FCCA022CFAD5B00C5F59E /* Main.storyboard */,
+				BB9CFAE522CFB157004EE419 /* Controllers */,
+				BB9CFAE422CFB14C004EE419 /* Models */,
+				BB9CFAE222CFB12A004EE419 /* Views */,
 				BB2FCCA322CFAD5B00C5F59E /* Assets.xcassets */,
 				BB2FCCA522CFAD5B00C5F59E /* LaunchScreen.storyboard */,
 				BB2FCCA822CFAD5B00C5F59E /* Info.plist */,
+				BB2FCC9C22CFAD5B00C5F59E /* AppDelegate.swift */,
 			);
 			path = "game-of-thrones-two";
+			sourceTree = "<group>";
+		};
+		BB9CFAE222CFB12A004EE419 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB2FCCA022CFAD5B00C5F59E /* Main.storyboard */,
+				BB9CFAEC22CFB7B5004EE419 /* EpisodeViewCell.swift */,
+				BB9CFAED22CFB7B5004EE419 /* EpisodeViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB9CFAE422CFB14C004EE419 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB9CFAE822CFB313004EE419 /* APIConstants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB9CFAE522CFB157004EE419 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB9CFAEA22CFB543004EE419 /* NetworkManagerDelegate.swift */,
+				BB2FCC9E22CFAD5B00C5F59E /* ViewController.swift */,
+				BB9CFAE622CFB1EB004EE419 /* NetworkManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D0EE11DBA2EAA4F2F7CB9D1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B712F76453C3A53DA61881E9 /* Pods_game_of_thrones_two.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0C4F2F79FF4E61C890CC14F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9E95BB33D606DE11F93566C /* Pods-game-of-thrones-two.debug.xcconfig */,
+				F9FDEDCF8C8E8433F9989921 /* Pods-game-of-thrones-two.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB2FCCAB22CFAD5B00C5F59E /* Build configuration list for PBXNativeTarget "game-of-thrones-two" */;
 			buildPhases = (
+				C5192EF239658B84A78B7CC6 /* [CP] Check Pods Manifest.lock */,
 				BB2FCC9522CFAD5A00C5F59E /* Sources */,
 				BB2FCC9622CFAD5A00C5F59E /* Frameworks */,
 				BB2FCC9722CFAD5A00C5F59E /* Resources */,
+				E6DDB21678EF26A34EE6CFA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9CFAEF22CFB7B5004EE419 /* EpisodeViewCell.xib in Resources */,
 				BB2FCCA722CFAD5B00C5F59E /* LaunchScreen.storyboard in Resources */,
 				BB2FCCA422CFAD5B00C5F59E /* Assets.xcassets in Resources */,
 				BB2FCCA222CFAD5B00C5F59E /* Main.storyboard in Resources */,
@@ -131,13 +197,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C5192EF239658B84A78B7CC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-game-of-thrones-two-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6DDB21678EF26A34EE6CFA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-game-of-thrones-two/Pods-game-of-thrones-two-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-game-of-thrones-two/Pods-game-of-thrones-two-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB2FCC9522CFAD5A00C5F59E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9CFAE922CFB313004EE419 /* APIConstants.swift in Sources */,
+				BB9CFAE722CFB1EB004EE419 /* NetworkManager.swift in Sources */,
+				BB9CFAEE22CFB7B5004EE419 /* EpisodeViewCell.swift in Sources */,
 				BB2FCC9F22CFAD5B00C5F59E /* ViewController.swift in Sources */,
 				BB2FCC9D22CFAD5B00C5F59E /* AppDelegate.swift in Sources */,
+				BB9CFAEB22CFB543004EE419 /* NetworkManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +387,7 @@
 		};
 		BB2FCCAC22CFAD5B00C5F59E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E95BB33D606DE11F93566C /* Pods-game-of-thrones-two.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +403,7 @@
 		};
 		BB2FCCAD22CFAD5B00C5F59E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9FDEDCF8C8E8433F9989921 /* Pods-game-of-thrones-two.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
