@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  var episodes: [Episode] = []
+  var show: [String : [Episode]] = [:]
   var networkRequests: [Any?] = []
   var delegate:NetworkManagerDelegateSerie?
   @IBOutlet weak var tableView: UITableView!
@@ -44,26 +44,29 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return episodes.count
+    return show["\(section+1)"]?.count ?? 0
+  }
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return show.count
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return "Season: \(section+1)"
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: Show.episodeViewCellName, for: indexPath) as! EpisodeViewCell
-
     
-    if let title = episodes[indexPath.row].name {
+    if let title = show["\(indexPath.section+1)"]![indexPath.row].name {
       cell.titleLabel.text = title
     }
     
-    if let season = episodes[indexPath.row].name,
-       let episode = episodes[indexPath.row].name {
-      cell.subtitleLabel.text = "Season: \(season), Episode: \(episode)"
+    if let episode = show["\(indexPath.section+1)"]![indexPath.row].number {
+      cell.subtitleLabel.text = "Episode: \(episode)"
     }
     
-    cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.init(red: 0.9, green: 0.2, blue: 0.5, alpha: 0.2) :  UIColor.white
     return cell
-    
-    
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -82,13 +85,25 @@ extension ViewController {
       if let showEpisodes = show["episodes"] as? [[String: Any]] {
         for i in 1...showEpisodes.count {
           var episode = Episode()
+          episode.season = "\(showEpisodes[i-1][EpisodeKeys.season] as! Int)"
           episode.name = showEpisodes[i-1][EpisodeKeys.name] as? String
           episode.airdate = showEpisodes[i-1][EpisodeKeys.airdate] as? String
           episode.airtime = showEpisodes[i-1][EpisodeKeys.airtime] as? String
           episode.id = showEpisodes[i-1][EpisodeKeys.id] as? Int
-          episode.number = showEpisodes[i-1][EpisodeKeys.number] as? String
+          episode.number = showEpisodes[i-1][EpisodeKeys.number] as? Int
           episode.summary = showEpisodes[i-1][EpisodeKeys.summary] as? String
-          episodes.append(episode)
+          if let imageDictionary = showEpisodes[i-1][EpisodeKeys.image] as? [String: String] {
+            episode.imageUrl = imageDictionary[EpisodeKeys.imageUrl]
+          }
+          
+          if let season = episode.season {
+            if self.show[season] != nil {
+              self.show[season]!.append(episode)
+            } else {
+              self.show[season] = []
+              self.show[season]!.append(episode)
+            }
+          }
         }
       }
     }

@@ -18,10 +18,11 @@ struct Episode {
   var id: Int?
   var name: String?
   var season: String?
-  var number: String?
+  var number: Int?
   var summary: String?
   var airdate: String?
   var airtime: String?
+  var imageUrl: String?
 }
 
 struct EpisodeKeys {
@@ -32,4 +33,6 @@ struct EpisodeKeys {
   static let summary = "summary"
   static let airdate = "airdate"
   static let airtime = "airtime"
+  static let imageUrl = "medium"
+  static let image = "image"
 }

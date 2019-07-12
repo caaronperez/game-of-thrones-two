@@ -14,16 +14,22 @@ class NetworkManager {
   var delegate: NetworkManagerDelegate?
 
   func downloadAPIPost(completion: @escaping ([String: Any]?) -> Void) {
-    Alamofire.request(Show.endPoint).responseJSON { response in
+    guard let url = URL(string: "\(Show.endPoint)") else {
+      completion(nil)
+      return
+    }
+    
+    Alamofire.request(url).responseJSON { response in
       guard response.result.isSuccess, let value = response.result.value as? [String: Any] else {
         completion(nil)
         return
       }
+      
       completion(value)
     }
   }
   
-  func getImage(imgUrl: String){
+  func getImage(imgUrl: String, completion: @escaping ([String: Any]?) -> Data) {
     
     let imgURL = URL(string: imgUrl)
     let task = URLSession.shared.dataTask(with: imgURL!) { [weak self] (data, response, error) in
