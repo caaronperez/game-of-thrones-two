@@ -1,5 +1,4 @@
 import Foundation
-import SwiftyJSON
 
 protocol NetworkManagerDelegate: class {
     func didDownloadPost(postArray: [String: Any])

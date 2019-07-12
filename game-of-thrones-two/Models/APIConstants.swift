@@ -10,7 +10,7 @@ import Foundation
 
 struct Show {
   static let endPoint = "https://api.tvmaze.com/shows/82?embed=seasons&embed=episodes"
-  static let tableViewCellHeight = 160.0
+  static let tableViewCellHeight = 80.0
   static let episodeViewCellName = "EpisodeViewCell"
 }
 

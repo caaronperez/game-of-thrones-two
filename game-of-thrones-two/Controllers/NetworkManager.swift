@@ -8,31 +8,18 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 class NetworkManager {
   
   var delegate: NetworkManagerDelegate?
-  
-  func downloadAPIPost(){
-    let urlString = URL(string: "\(Show.endPoint)")
-    if let url = urlString {
-      let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-        if error != nil {
-          print(error as Any)
-        } else {
-          do {
-            if let jsonArray = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] {
-              DispatchQueue.main.async {
-                self?.delegate?.didDownloadPost(postArray: jsonArray)
-              }
-            }
-          } catch {
-            print(error.localizedDescription)
-          }
-        }
+
+  func downloadAPIPost(completion: @escaping ([String: Any]?) -> Void) {
+    Alamofire.request(Show.endPoint).responseJSON { response in
+      guard response.result.isSuccess, let value = response.result.value as? [String: Any] else {
+        completion(nil)
+        return
       }
-      task.resume()
+      completion(value)
     }
   }
   

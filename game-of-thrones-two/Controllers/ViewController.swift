@@ -17,21 +17,22 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    //tableView.register(EpisodeViewCell.self, forCellReuseIdentifier: Show.episodeViewCellName)
-    
-     tableView.register(UINib(nibName: "EpisodeViewCell" , bundle: nil), forCellReuseIdentifier: "EpisodeViewCell")
-     getData {
-      tableView.reloadData()
+    tableView.register(UINib(nibName: Show.episodeViewCellName , bundle: nil), forCellReuseIdentifier: Show.episodeViewCellName)
+    self.getData { response in
+      if let safeResponse = response {
+        self.didDownloadPost(postArray: safeResponse)
+        self.tableView.reloadData()
+      }
     }
     
   }
   
-  func getData(closure: ()-> Void){
-      let myNetworkManager = NetworkManager()
-      networkRequests.append(myNetworkManager)
-      myNetworkManager.delegate = self
-      myNetworkManager.downloadAPIPost()
-      closure()
+  func getData(completion: @escaping ([String: Any]?) -> Void){
+    let myNetworkManager = NetworkManager()
+    networkRequests.append(myNetworkManager)
+    myNetworkManager.downloadAPIPost(){ response in
+      completion(response)
+    }
   }
 
   override func didReceiveMemoryWarning() {
@@ -75,7 +76,7 @@ extension ViewController: UITableViewDelegate {
   
 }
 
-extension ViewController: NetworkManagerDelegate {
+extension ViewController {
   func didDownloadPost(postArray: [String : Any]) {
     if let show = postArray["_embedded"] as? [String : Any] {
       if let showEpisodes = show["episodes"] as? [[String: Any]] {
@@ -91,7 +92,6 @@ extension ViewController: NetworkManagerDelegate {
         }
       }
     }
-    tableView.reloadData()
   }
 }
 

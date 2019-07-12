@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF3A8B1D87437748FFBF6B68F60CE502"
+               BlueprintIdentifier = "97487EF55ED1B5C7163FAE4DEC2B324E"
                BuildableName = "Pods_game_of_thrones_two.framework"
                BlueprintName = "Pods-game-of-thrones-two"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EF3A8B1D87437748FFBF6B68F60CE502"
+            BlueprintIdentifier = "97487EF55ED1B5C7163FAE4DEC2B324E"
             BuildableName = "Pods_game_of_thrones_two.framework"
             BlueprintName = "Pods-game-of-thrones-two"
             ReferencedContainer = "container:Pods.xcodeproj">

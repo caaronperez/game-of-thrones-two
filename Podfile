@@ -4,8 +4,6 @@ target 'game-of-thrones-two' do
 
   # Pods for GoT
   pod 'Alamofire', '~> 4.0'
-  pod 'SwiftyJSON'
-  pod 'Cosmos', '~> 12.0'
   pod 'AlamofireImage', '~> 3.3'
 
 end
